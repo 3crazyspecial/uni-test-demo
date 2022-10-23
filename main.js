@@ -1,4 +1,6 @@
 import App from './App'
+import '@/router/index';
+import { RouterMount } from 'uni-simple-router';
 
 // #ifndef VUE3
 import Vue from 'vue'
@@ -7,6 +9,7 @@ App.mpType = 'app'
 const app = new Vue({
     ...App
 })
+RouterMount(app, '#app');
 app.$mount()
 // #endif
 
